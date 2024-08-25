@@ -1,4 +1,4 @@
-# er-tools container imgaes
+# er-tools container images
 
 ## er-tools-git
 
