@@ -1,0 +1,16 @@
+FROM debian:stable-20240812-slim as builder
+RUN apt update && apt install -y \
+    wget \
+    && rm -rf /var/lib/apt/lists/* \
+    && wget "https://github.com/alecthomas/chroma/releases/download/v2.14.0/chroma-2.14.0-linux-amd64.tar.gz" \
+    && mkdir tmp/chroma \
+    && tar -xzf "chroma-2.14.0-linux-amd64.tar.gz" -C tmp/chroma/ \
+    && cp tmp/chroma/chroma usr/local/bin/ \
+    && rm -rf tmp/chroma/ \
+    && rm chroma-2.14.0-linux-amd64.tar.gz
+
+FROM busybox:1.36.1-glibc
+COPY --from=builder usr/local/bin/chroma /bin/
+RUN echo 'alias ccat="chroma --style=vim"' >> .ashrc
+# required ENV environment variable so ash reads ashrc on startup
+ENV ENV=.ashrc
