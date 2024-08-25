@@ -14,6 +14,6 @@ based on debian bookworm slim - just adds wget and vim-tiny for basic web retrie
 
 ## er-tools-pwsh
 
-same tools as er-tools-get + powershell core
+same tools as er-tools-git + powershell core
 
 - current size: ~470MB
