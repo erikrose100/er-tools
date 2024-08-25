@@ -26,6 +26,8 @@ jobs:
             imagename: "-pwsh"
           - dockerfile: "Dockerfile.busyboxchroma.toolbox"
             imagename: "-bb"
+          - dockerfile: "Dockerfile.alpine.toolbox"
+            imagename: "-alpine"
     # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
     permissions:
       contents: read
