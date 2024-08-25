@@ -22,6 +22,8 @@ jobs:
             imagename: "-git"
           - dockerfile: "Dockerfile.debslim.toolbox"
             imagename: "-slim"
+          - dockerfile: "Dockerfile.pwsh.toolbox"
+            imagename: "-pwsh"
     # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
     permissions:
       contents: read
