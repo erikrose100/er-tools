@@ -6,6 +6,12 @@ based on busybox glibc base image - adds chroma + ccat alias for terminal syntax
 
 - current size: ~11.3MB
 
+## er-tools-alpine
+
+based on alpine base image - adds zsh, ohmyzsh, and git
+
+- current size: ~44.6MB
+
 ## er-tools-slim
 
 based on debian bookworm slim - just adds wget and vim-tiny for basic web retrieval and text editing
