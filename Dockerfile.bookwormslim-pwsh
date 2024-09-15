@@ -1,0 +1,12 @@
+ARG BOOKWORM_VERSION=20240904
+FROM debian:bookworm-${BOOKWORM_VERSION}-slim
+ARG PWSH_VERSION=7.4.5-1
+RUN apt update \
+    && apt install -y wget \
+    && wget https://github.com/PowerShell/PowerShell/releases/download/v7.4.5/powershell_$PWSH_VERSION.deb_amd64.deb \
+    && dpkg --force-all -i powershell_$PWSH_VERSION.deb_amd64.deb \
+    && apt install -f -y \
+    && rm powershell_$PWSH_VERSION.deb_amd64.deb \
+    && rm -rf /var/lib/apt/lists/*
+
+CMD ["pwsh"]
