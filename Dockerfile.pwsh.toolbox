@@ -111,4 +111,7 @@ RUN sh -c "$(wget -O- https://github.com/erikrose100/zsh-in-docker/releases/down
 
 ENV ZSH_COLORIZE_STYLE="vim"
 
+
+ENV ZSH_COLORIZE_STYLE="vim"
+
 CMD ["zsh"]
