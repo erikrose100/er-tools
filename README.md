@@ -24,6 +24,12 @@ based on debian bookworm slim - adds zsh w/ ohmyzsh as well as minimal dependenc
 
 - current size: ~218MB
 
+## er-tools-bookwormslim-pwsh
+
+debian bookworm slim with powershell core installed
+
+- current size: ~305MB
+
 ## er-tools-pwsh
 
 same tools as er-tools-git + powershell core
